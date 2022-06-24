@@ -1,9 +1,9 @@
 {
-  "name": "@dzhumaevn/template-react-component-library",
+  "name": "@innersource/kiwi-uikit",
   "publishConfig": {
-    "registry": "https://npm.pkg.github.com/dzhumaevn"
+    "registry": "https://scm.x5.ru/el5/innersource/"
   },
-  "version": "0.0.13",
+  "version": "0.1.0",
   "description": "A simple template for a custom React component library",
   "scripts": {
     "rollup": "rollup -c"
@@ -18,18 +18,26 @@
     "react": "^18.1.0",
     "rollup": "^2.75.7",
     "rollup-plugin-dts": "^4.2.2",
+    "rollup-plugin-peer-deps-external": "^2.2.4",
+    "rollup-plugin-terser": "^7.0.2",
     "typescript": "^4.7.4"
+  },
+  "dependencies": {
+    "@chakra-ui/react": "^2.2.1",
+    "@emotion/react": "11",
+    "@emotion/styled": "11",
+    "framer-motion": "5"
+  },
+  "peerDependencies": {
+    "@chakra-ui/react": "^2.2.1",
+    "@emotion/react": "11",
+    "@emotion/styled": "11",
+    "framer-motion": "5"
   },
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
   "files": [
     "dist"
   ],
-  "types": "dist/index.d.ts",
-  "dependencies": {
-    "@chakra-ui/react": "^2.2.1",
-    "@emotion/react": "11",
-    "@emotion/styled": "11",
-    "framer-motion": "5"
-  }
+  "types": "dist/index.d.ts"
 }
