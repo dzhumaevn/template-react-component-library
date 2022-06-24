@@ -1,11 +1,7 @@
-import React from "react";
+import React from 'react';
 
-export interface ButtonProps {
-  label: string;
-}
+import {Button as ButtonComponent, ButtonProps} from '@chakra-ui/react';
 
-const Button = (props: ButtonProps) => {
-  return <button>{props.label}</button>;
-};
+const Button = (props: {smth?: any} & ButtonProps) => <ButtonComponent {...props} />;
 
 export default Button;
